@@ -214,6 +214,30 @@
       .reveal { opacity: 1; transform: none; }
       .float-paw, .ball-track { display: none; }
     }
+
+    /* ---------- mobile ---------- */
+    @media (max-width: 640px) {
+      .site-head .wrap { flex-direction: column; gap: 10px; text-align: center; }
+      .site-nav { justify-content: center; gap: 14px 20px; }
+      .scene .wrap { padding-top: 44px; padding-bottom: 200px; }
+      .sun { width: 70px; height: 70px; top: 12px; right: 4%; }
+      .kicker { font-size: .68rem; letter-spacing: .12em; padding: 7px 14px; }
+      .subtitle { font-size: 1.02rem; }
+      .cloud.c1 { top: 40px; width: 110px; }
+      .cloud.c2 { top: 108px; width: 80px; }
+      .cloud.c3 { display: none; }
+      .butterfly { width: 26px; }
+      .butterfly.b1 { top: 68%; left: 7%; }
+      .butterfly.b2 { top: 60%; right: 9%; }
+      .float-paw { bottom: 110px; }
+      .profiles { padding: 60px 0 24px; }
+      .dog-card { padding: 26px 16px 24px; }
+      .stats-band { padding: 54px 0; }
+      .stat { padding: 20px 10px; }
+      .stat .n { font-size: 1.9rem; }
+      .gallery { padding: 60px 0; }
+      .back-band { padding: 54px 0; }
+    }
   </style>
 </head>
 <body>
