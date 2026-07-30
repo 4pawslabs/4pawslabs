@@ -87,7 +87,8 @@
     @keyframes ball-x { from { left: -50px; } to { left: 104%; } }
     @keyframes ball-y { from { transform: translateY(0); } to { transform: translateY(54px); } }
     /* the chase: same track as the ball, staggered behind it */
-    .chaser { position: absolute; bottom: -28px; left: -170px; animation: chase-x 11s linear infinite; }
+    .chaser { position: absolute; bottom: -28px; left: -170px; width: 96px; animation: chase-x 11s linear infinite; }
+    .chaser svg { max-width: none; display: block; }
     @keyframes chase-x { from { left: -170px; } to { left: calc(100% + 190px); } }
     .chaser.ch-1 { animation-delay: 1.2s; }
     .chaser.ch-2 { animation-delay: 2s; }
@@ -231,6 +232,13 @@
       .butterfly.b1 { top: 68%; left: 7%; }
       .butterfly.b2 { top: 60%; right: 9%; }
       .float-paw { bottom: 110px; }
+      /* smaller, quicker chase on small screens, grounded on a taller meadow */
+      .meadow { height: 170px; }
+      .ball-track { bottom: 34px; height: 80px; }
+      .ball-y { width: 26px; height: 26px; }
+      .chaser { width: 70px; bottom: -16px; }
+      .chaser svg { width: 70px; height: 47px; }
+      .ball-x, .chaser { animation-duration: 8.5s; }
       .profiles { padding: 60px 0 24px; }
       .dog-card { padding: 26px 16px 24px; }
       .stats-band { padding: 54px 0; }
