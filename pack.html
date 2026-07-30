@@ -43,6 +43,7 @@
       letter-spacing: .18em; text-transform: uppercase; color: var(--amber-deep); background: #fff;
       border-radius: 999px; padding: 8px 18px; box-shadow: 0 3px 0 rgba(43,58,47,.12); margin-bottom: 22px; }
     .title { font-size: clamp(2.6rem, 8vw, 5rem); font-weight: 800; color: var(--pine); }
+    .title .w { display: inline-block; white-space: nowrap; }
     .title .b { display: inline-block; animation: pop-in .7s cubic-bezier(.2,1.6,.4,1) both; }
     .title .b:hover { animation: bounce .5s; color: var(--amber-deep); }
     .subtitle { margin: 18px auto 0; max-width: 52ch; font-size: 1.15rem; color: #3E5546; }
@@ -530,11 +531,14 @@
 
 <script>
 (function () {
-  // Bouncy title letters
+  // Bouncy title letters — letters are grouped per word so lines only break between words
   var title = document.getElementById('bounce-title');
-  title.innerHTML = title.textContent.split('').map(function (ch, i) {
-    return ch === ' ' ? ' ' : '<span class="b" style="animation-delay:' + (i * 60) + 'ms">' + ch + '</span>';
-  }).join('');
+  var li = 0;
+  title.innerHTML = title.textContent.split(' ').map(function (word) {
+    return '<span class="w">' + word.split('').map(function (ch) {
+      return '<span class="b" style="animation-delay:' + (li++ * 60) + 'ms">' + ch + '</span>';
+    }).join('') + '</span>';
+  }).join(' ');
 
   // Paw trail marquee (two identical halves for a seamless loop)
   var paw = '<svg width="26" height="26" viewBox="0 0 64 64"><g fill="#3E6B52">' +
