@@ -81,15 +81,18 @@
     @keyframes sway { from { transform: skewX(-7deg); } to { transform: skewX(7deg); } }
     /* bouncing ball */
     .ball-track { position: absolute; bottom: 96px; left: 0; z-index: 6; width: 100%; height: 90px; pointer-events: none; }
-    .ball-x { position: absolute; animation: ball-x 11s linear infinite; }
+    /* Ball and dogs share one race track (race-x) in viewport-relative units, so the
+       finish order depends only on animation-delay — never on screen width. A track
+       built from mismatched px offsets (old version) changes which one visually exits
+       first as the viewport narrows; vw units keep the crossing point proportional. */
+    .ball-x, .chaser { position: absolute; left: 0; transform: translateX(-38vw);
+      animation-name: race-x; animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 11s; }
     .ball-y { width: 34px; height: 34px; animation: ball-y 0.62s cubic-bezier(.35,0,.65,1) infinite alternate; }
     .ball-y svg { animation: spin 1.4s linear infinite; display: block; }
-    @keyframes ball-x { from { left: -50px; } to { left: 104%; } }
-    @keyframes ball-y { from { transform: translateY(0); } to { transform: translateY(54px); } }
+    @keyframes race-x { from { transform: translateX(-38vw); } to { transform: translateX(112vw); } }
     /* the chase: same track as the ball, staggered behind it */
-    .chaser { position: absolute; bottom: -28px; left: -170px; width: 96px; animation: chase-x 11s linear infinite; }
+    .chaser { bottom: -28px; width: 96px; }
     .chaser svg { max-width: none; display: block; }
-    @keyframes chase-x { from { left: -170px; } to { left: calc(100% + 190px); } }
     .chaser.ch-1 { animation-delay: 1.2s; }
     .chaser.ch-2 { animation-delay: 2s; }
     .gallop { animation: gallop .38s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center bottom; }
