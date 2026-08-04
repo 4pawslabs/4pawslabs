@@ -62,15 +62,6 @@
     margin: 18px 0;
     font-size: 14.5px;
   }
-  .placeholder {
-    background: #FFF4E5;
-    border: 1px dashed #D98E00;
-    color: #7A4E00;
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-size: 14px;
-    display: inline-block;
-  }
   table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14.5px; }
   th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
   th { color: var(--muted); font-weight: 600; }
@@ -84,7 +75,6 @@
   }
   @media (prefers-color-scheme: dark) {
     :root { --text: #F0F0F0; --muted: #A0A5AC; --bg: #121316; --card: #1C1E22; --border: #2A2D32; }
-    .placeholder { background: #3A2E10; border-color: #B77A00; color: #FFD08A; }
   }
 </style>
 </head>
@@ -103,10 +93,10 @@
     and what rights you have over it.
   </p>
   <p>
-    Door2Door is a multi-tenant platform — each shop ("tenant") you order from operates
-    independently, but all customer data is processed by 4PawsLabs as the platform operator.
-    We do not accept payments in-app: all orders are <strong>Cash on Delivery</strong>, so we
-    never collect card, UPI, or bank details through the app.
+    Each shop you order from on Door2Door operates independently, but all customer data is
+    processed by 4PawsLabs as the platform operator. We do not accept payments in-app: all
+    orders are <strong>Cash on Delivery</strong>, so we never collect card, UPI, or bank
+    details through the app.
   </p>
 
   <h2>1. Who this applies to</h2>
@@ -138,17 +128,16 @@
 
   <h3>2.2 Information collected automatically</h3>
   <ul>
-    <li><strong>Push notification token</strong> (Firebase Cloud Messaging) — used solely to
+    <li><strong>Push notification token</strong> — a device identifier used solely to
       deliver order-status notifications to your device.</li>
     <li><strong>Basic technical data</strong> — device type and app version, used only for
       debugging crashes and compatibility issues.</li>
   </ul>
 
   <div class="callout">
-    <strong>What we do <em>not</em> collect:</strong> we do not use advertising SDKs,
-    third-party analytics/tracking SDKs, or crash-reporting SDKs beyond Firebase's own
-    infrastructure. We do not collect payment card or bank data (Cash on Delivery only).
-    We do not track your location in the background.
+    <strong>What we do <em>not</em> collect:</strong> we do not use advertising SDKs or
+    third-party analytics/tracking SDKs. We do not collect payment card or bank data
+    (Cash on Delivery only). We do not track your location in the background.
   </div>
 
   <h2>3. How we use your information</h2>
@@ -170,11 +159,10 @@
       address, contact mobile number</td><td>To prepare and hand off your order</td></tr>
     <tr><td>Assigned rider</td><td>Delivery address, zone, contact mobile number</td>
       <td>To complete delivery or pickup handoff</td></tr>
-    <tr><td>Google Firebase</td><td>Account identifier, email, push token</td>
-      <td>Authentication and push notifications infrastructure</td></tr>
-    <tr><td>Amazon Web Services (AWS)</td><td>All app data (hosting), any images you view
-      in the app catalog</td><td>Backend hosting and file storage — 4PawsLabs' own
-      infrastructure, not a separate data controller</td></tr>
+    <tr><td>Our infrastructure providers</td><td>Account identifier, email, push token,
+      and app data (hosting), including any images you view in the app catalog</td>
+      <td>Authentication, push notifications, backend hosting, and file storage —
+      4PawsLabs' own infrastructure, not a separate data controller</td></tr>
   </table>
   <p>We do <strong>not</strong> sell your personal data to anyone, and we do not share it
   with advertisers or data brokers.</p>
