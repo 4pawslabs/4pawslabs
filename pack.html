@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Pack — Charlie &amp; Marco | 4PawsLabs</title>
-  <meta name="description" content="Meet Charlie the golden retriever and Marco the black German Shepherd — the four paws behind the name 4PawsLabs.">
+  <title>The Pack - Charlie &amp; Marco | 4PawsLabs</title>
+  <meta name="description" content="Meet Charlie the golden retriever and Marco the black German Shepherd - the four paws behind the name 4PawsLabs.">
+  <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -82,7 +86,7 @@
     /* bouncing ball */
     .ball-track { position: absolute; bottom: 96px; left: 0; z-index: 6; width: 100%; height: 90px; pointer-events: none; }
     /* Ball and dogs share one race track (race-x) in viewport-relative units, so the
-       finish order depends only on animation-delay — never on screen width. A track
+       finish order depends only on animation-delay - never on screen width. A track
        built from mismatched px offsets (old version) changes which one visually exits
        first as the viewport narrows; vw units keep the crossing point proportional. */
     .ball-x, .chaser { position: absolute; left: 0; transform: translateX(-38vw);
@@ -272,7 +276,7 @@
     </a>
     <nav class="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="d2d/">D2D</a>
+      <a href="d2d/">Door2Door</a>
       <a href="pack.html" aria-current="page">The pack 🐾</a>
     </nav>
   </div>
@@ -314,7 +318,7 @@
     <span class="kicker">🐾 The four paws behind the name</span>
     <h1 class="title" id="bounce-title">Meet the Pack</h1>
     <p class="subtitle">4PawsLabs isn't named after a business plan. It's named after
-    <strong>Charlie</strong> and <strong>Marco</strong> — co-founders' best friends,
+    <strong>Charlie</strong> and <strong>Marco</strong> - co-founders' best friends,
     nap champions, and the most reliable members of the quality-assurance team.</p>
   </div>
 
@@ -396,7 +400,7 @@
   <div class="wrap">
     <p class="sec-kicker reveal">Official personnel files</p>
     <h2 class="sec-title reveal">Two dogs. Eight paws. Zero bugs allowed.</h2>
-    <p class="sec-sub reveal">Tap a dog — they've been very good and they know it.</p>
+    <p class="sec-sub reveal">Tap a dog - they've been very good and they know it.</p>
 
     <div class="dog-grid">
       <!-- CHARLIE -->
@@ -438,7 +442,7 @@
           </div>
           <span class="cap">Charlie ☀️</span>
         </div>
-        <p class="hint">psst — tap Charlie</p>
+        <p class="hint">psst - tap Charlie</p>
       </article>
 
       <!-- MARCO -->
@@ -483,7 +487,7 @@
           </div>
           <span class="cap">Marco 🌙</span>
         </div>
-        <p class="hint">psst — tap Marco</p>
+        <p class="hint">psst - tap Marco</p>
       </article>
     </div>
   </div>
@@ -524,7 +528,7 @@
     <h2 class="reveal">Okay, back to work. 🐾</h2>
     <p class="reveal">The pack has approved this website. See what the humans build when they're not throwing the ball.</p>
     <div class="btns reveal">
-      <a class="btn btn-amber" href="d2d/">Explore D2D</a>
+      <a class="btn btn-amber" href="d2d/">Explore Door2Door</a>
       <a class="btn btn-line" href="index.html">Back to the lab</a>
     </div>
   </div>
@@ -535,7 +539,7 @@
     <span>© 2026 4PawsLabs · 4pawslabs.in</span>
     <nav aria-label="Footer">
       <a href="index.html">Home</a> &nbsp;·&nbsp;
-      <a href="d2d/">D2D</a> &nbsp;·&nbsp;
+      <a href="d2d/">Door2Door</a> &nbsp;·&nbsp;
       <a href="pack.html">The pack</a>
     </nav>
   </div>
@@ -543,7 +547,7 @@
 
 <script>
 (function () {
-  // Bouncy title letters — letters are grouped per word so lines only break between words
+  // Bouncy title letters - letters are grouped per word so lines only break between words
   var title = document.getElementById('bounce-title');
   var li = 0;
   title.innerHTML = title.textContent.split(' ').map(function (word) {

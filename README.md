@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Bricolage+Grotesque&size=22&pause=1200&color=2A6B4E&center=true&vCenter=true&width=600&lines=Founded+by+Saurav+%26+Shubham;Home+of+D2D+%F0%9F%9A%80;Named+after+Charlie+%26+Marco+%F0%9F%90%BE" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Bricolage+Grotesque&size=22&pause=1200&color=2A6B4E&center=true&vCenter=true&width=600&lines=Founded+by+Saurav+%26+Shubham;Home+of+Door2Door+%F0%9F%9A%80;Named+after+Charlie+%26+Marco+%F0%9F%90%BE" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -23,10 +23,10 @@
 
 ### 🐾 Who we are
 
-**4PawsLabs** is a founder-led software lab started by **Saurav Singh Selakoti** and **Shubham Selakoti**. We take software all the way — from idea to app store — building both:
+**4PawsLabs** is a founder-led software lab started by **Saurav Singh Selakoti** and **Shubham Selakoti**. We take software all the way - from idea to app store - building both:
 
-- 🚀 **Products of our own**, like **[D2D](https://4pawslabs.in/)**, a zero-commission delivery platform built for small towns the delivery giants skipped.
-- 🛠️ **Custom software for clients** — mobile apps, backends, and everything in between, delivered end-to-end and supported after launch.
+- 🚀 **Products of our own**, like **[Door2Door](https://4pawslabs.in/)**, a zero-commission delivery platform built for small towns the delivery giants skipped.
+- 🛠️ **Custom software for clients** - mobile apps, backends, and everything in between, delivered end-to-end and supported after launch.
 
 No account managers, no hand-offs. The people you talk to are the people who write the code.
 
@@ -34,7 +34,7 @@ No account managers, no hand-offs. The people you talk to are the people who wri
 
 ### 🐕 Why "4Paws"?
 
-We're not named after a business plan — we're named after **Charlie** (golden retriever, Chief Morale Officer) and **Marco** (black German Shepherd, Head of Security), the four paws behind the lab and the toughest QA team we've got.
+We're not named after a business plan - we're named after **Charlie** (golden retriever, Chief Morale Officer) and **Marco** (black German Shepherd, Head of Security), the four paws behind the lab and the toughest QA team we've got.
 
 <p align="center"><b><a href="https://4pawslabs.in/pack.html">→ Meet the full pack at 4pawslabs.in/pack.html →</a></b></p>
 
@@ -51,7 +51,7 @@ We're not named after a business plan — we're named after **Charlie** (golden 
 
 ### 🚀 What we're building
 
-**[D2D](https://4pawslabs.in/)** — one app for a small town's ordering, delivery, and local business, run by the shop owner who knows the town best.
+**[Door2Door](https://4pawslabs.in/)** - one app for a small town's ordering, delivery, and local business, run by the shop owner who knows the town best.
 
 <br>
 
@@ -98,7 +98,7 @@ We're not named after a business plan — we're named after **Charlie** (golden 
 
 ### 📬 Get in touch
 
-Have an app idea, a business that needs software, or a town that needs D2D?
+Have an app idea, a business that needs software, or a town that needs Door2Door?
 
 <p align="center">
   <a href="mailto:4pawslabs@gmail.com"><img src="https://img.shields.io/badge/Email-4pawslabs%40gmail.com-2A6B4E?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
