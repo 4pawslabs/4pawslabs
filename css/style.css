@@ -39,7 +39,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 .on-dark .eyebrow { color: var(--amber); }
 
 /* ---------- header ---------- */
-.site-head { background: var(--pine-deep); }
+.site-head { background: var(--pine-deep); position: relative; z-index: 100; }
 .site-head .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; padding-bottom: 20px; }
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
 .brand .mark { width: 38px; height: 38px; }
@@ -50,6 +50,35 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 .site-nav a:hover, .site-nav a[aria-current] { color: var(--on-pine); }
 .site-nav a.cta { color: var(--pine-deep); background: var(--amber); padding: 8px 18px; border-radius: 999px; font-weight: 600; }
 .site-nav a.cta:hover { background: #F2A344; }
+
+/* ---------- nav dropdown (Projects) ---------- */
+.nav-drop { position: relative; }
+.nav-drop-btn { display: inline-flex; align-items: center; gap: 6px; background: none; border: 0;
+  cursor: pointer; font-family: inherit; color: var(--on-pine-muted); font-size: .95rem; font-weight: 500;
+  padding: 0; }
+.nav-drop-btn:hover, .nav-drop-btn.current { color: var(--on-pine); }
+.nav-drop-btn .chev { width: 9px; height: 9px; flex: none; transition: transform .2s ease; }
+.nav-drop:hover .nav-drop-btn .chev, .nav-drop.open .nav-drop-btn .chev { transform: rotate(180deg); }
+.nav-drop-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 10px;
+  background: var(--pine); border: 1px solid var(--pine-line); border-radius: 12px; padding: 8px;
+  min-width: 168px; display: none; flex-direction: column; gap: 2px; box-shadow: 0 14px 30px rgba(12,39,31,.35);
+  z-index: 60; }
+.nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu, .nav-drop.open .nav-drop-menu { display: flex; }
+.nav-drop-menu a { display: flex; align-items: center; gap: 10px; padding: 7px 12px; border-radius: 8px; }
+.nav-drop-menu a:hover, .nav-drop-menu a[aria-current] { background: rgba(255,255,255,.08); color: var(--on-pine); }
+.nav-ico { width: 22px; height: 22px; border-radius: 7px; object-fit: cover; flex: none; }
+
+/* ---------- nav toggle (mobile hamburger) ---------- */
+.nav-toggle { display: none; flex: none; width: 40px; height: 40px; border: 0; background: transparent;
+  cursor: pointer; position: relative; padding: 0; }
+.nav-toggle::before, .nav-toggle::after, .nav-toggle .bar { content: ""; position: absolute; left: 8px; right: 8px;
+  height: 2px; background: var(--on-pine); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+.nav-toggle::before { top: 14px; }
+.nav-toggle .bar { top: 19px; }
+.nav-toggle::after { top: 24px; }
+.nav-toggle[aria-expanded="true"]::before { transform: translateY(5px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .bar { opacity: 0; }
+.nav-toggle[aria-expanded="true"]::after { transform: translateY(-5px) rotate(-45deg); }
 
 /* ---------- hero ---------- */
 .hero { background: linear-gradient(175deg, var(--pine-deep) 0%, var(--pine) 90%); color: var(--on-pine);
@@ -142,6 +171,34 @@ table.cmp td.us { font-weight: 600; color: var(--pine); background: var(--moss);
 table.cmp tr:last-child td { border-bottom: 0; }
 .table-scroll { overflow-x: auto; border-radius: 16px; }
 
+/* ---------- screens banner (wide app mockup) ---------- */
+.screens-banner { border-radius: 22px; overflow: hidden; box-shadow: 0 20px 44px rgba(12,39,31,.2); }
+.screens-banner img { display: block; width: 100%; height: auto; }
+
+/* ---------- mascot banner (PixelCraft) ---------- */
+.mascot-banner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.mascot-banner img { width: 190px; height: 190px; border-radius: 28px; object-fit: cover;
+  box-shadow: 0 20px 40px rgba(12,39,31,.18); }
+.mascot-banner p { font-family: var(--display); font-weight: 600; color: var(--muted); font-size: 1.02rem; }
+.fox-steps .step { display: inline-flex; align-items: center; gap: 10px; }
+.fox-steps .step img { width: 28px; height: 28px; object-fit: contain; flex: none; }
+
+/* ---------- game cards (PlayArena) ---------- */
+.game-card { text-align: left; }
+.game-ico { width: 46px; height: 46px; border-radius: 13px; object-fit: cover; margin-bottom: 14px;
+  background: #fff; padding: 3px; box-shadow: 0 1px 3px rgba(29,36,32,.12); }
+.game-card h3 { margin-top: 0; }
+
+/* ---------- app screenshots showcase ---------- */
+.app-shots { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+.app-shot { flex: none; width: 190px; }
+.app-shot .frame { border-radius: 26px; overflow: hidden; background: var(--pine-deep); padding: 6px;
+  box-shadow: 0 20px 40px rgba(12,39,31,.2); }
+.app-shot img { display: block; width: 100%; height: auto; border-radius: 20px; }
+.app-shot .cap { display: block; text-align: center; margin-top: 12px; font-family: var(--display);
+  font-weight: 600; font-size: .88rem; color: var(--muted); }
+@media (max-width: 640px) { .app-shot { width: 140px; } }
+
 /* ---------- store badges (get the app) ---------- */
 .store-panel { display: flex; align-items: center; justify-content: space-between; gap: 40px;
   flex-wrap: wrap; }
@@ -198,16 +255,45 @@ table.cmp tr:last-child td { border-bottom: 0; }
 .contact-card .mail { display: block; margin-top: 18px; color: var(--on-pine-muted); font-size: .95rem; }
 .contact-card .mail a { color: var(--amber); text-decoration: none; }
 
-.site-foot { background: var(--pine-deep); color: var(--on-pine-muted); margin-top: 84px; }
-.site-foot .wrap { padding-top: 34px; padding-bottom: 34px; display: flex; justify-content: space-between;
-  align-items: center; gap: 16px; flex-wrap: wrap; font-size: .92rem; }
+.site-foot { background: var(--pine-deep); color: var(--on-pine-muted); margin-top: 84px; padding-top: 52px; }
 .site-foot a { color: var(--on-pine-muted); text-decoration: none; }
 .site-foot a:hover { color: var(--on-pine); }
+.foot-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 32px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.09); }
+.foot-brand { display: flex; flex-direction: column; gap: 14px; }
+.foot-brand .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.foot-brand .brand .mark { width: 30px; height: 30px; flex: none; }
+.foot-brand .brand .name { font-family: var(--display); font-weight: 700; font-size: 1.05rem; color: var(--on-pine); }
+.foot-brand .brand .name em { font-style: normal; color: var(--amber); }
+.foot-brand p { font-size: .92rem; max-width: 34ch; line-height: 1.55; }
+.foot-col h4 { font-family: var(--display); font-size: .78rem; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--on-pine); margin-bottom: 16px; }
+.foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.foot-col a { font-size: .92rem; display: flex; align-items: center; gap: 9px; }
+.foot-ico { width: 20px; height: 20px; border-radius: 6px; object-fit: cover; flex: none; }
+.foot-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+  gap: 10px; padding: 22px 0; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-brand { grid-column: 1 / -1; } }
+@media (max-width: 480px) { .foot-grid { grid-template-columns: 1fr; } }
+
+/* ---------- responsive nav ---------- */
+@media (max-width: 860px) {
+  .nav-toggle { display: block; }
+  .site-head .wrap { position: relative; }
+  .site-nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch;
+    gap: 2px; background: var(--pine-deep); border-top: 1px solid var(--pine-line); padding: 10px 24px 18px;
+    max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height .3s ease, opacity .2s ease; }
+  .site-nav.open { max-height: 520px; opacity: 1; visibility: visible; }
+  .site-nav a { padding: 11px 2px; }
+  .site-nav a.cta { text-align: center; margin-top: 8px; }
+  .nav-drop { width: 100%; }
+  .nav-drop-btn { width: 100%; justify-content: space-between; padding: 11px 2px; }
+  .nav-drop-menu { position: static; transform: none; margin-top: 0; box-shadow: none; border: 0;
+    background: rgba(255,255,255,.05); padding: 4px 4px 4px 14px; }
+}
 
 /* ---------- small screens ---------- */
 @media (max-width: 640px) {
-  .site-head .wrap { flex-direction: column; gap: 12px; text-align: center; }
-  .site-nav { justify-content: center; gap: 12px 20px; }
   .hero .wrap { padding-top: 56px; padding-bottom: 110px; }
   .hero-actions .btn { padding: 12px 22px; font-size: .95rem; }
   section { padding: 60px 0; }
