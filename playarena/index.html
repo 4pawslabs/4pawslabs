@@ -58,9 +58,8 @@
   <div class="wrap">
     <p class="eyebrow" style="color:#E8912D;">PlayArena - a 4PawsLabs product</p>
     <h1>Six games. <span class="hl">Zero sign-up.</span></h1>
-    <p class="lede" style="color:#A8BCAD;">No account, no login, no email required. Pick a game,
-    pick a mode, and play - your name and avatar stay on your device. Play solo against a bot,
-    pass the phone around the table, or share a room code and play online with friends.</p>
+    <p class="lede" style="color:#A8BCAD;">No account, no login, no email. Pick a game, pick a
+    mode, and play - solo against a bot, pass-and-play, or online with a room code.</p>
     <div class="hero-actions">
       <a class="btn btn-solid" href="#get-app">Get PlayArena</a>
       <a class="btn btn-ghost" href="#games">See the games</a>
@@ -87,12 +86,24 @@
   </svg>
 </div>
 
-<!-- ============ APP SCREENS ============ -->
+<!-- ============ APP PREVIEW ============ -->
 <section class="tight">
   <div class="wrap">
-    <div class="screens-banner">
-      <img src="../images/screens/playarena/prototype.jpg" alt="PlayArena app screens - home, Sudoku board and leaderboard" loading="lazy">
+    <div class="preview-carousel" data-carousel>
+      <div class="pc-viewport">
+        <div class="pc-slide"><img src="../images/previews/playarena/preview-1.webp" alt="PlayArena - six logic and party games, play online with real players" loading="lazy"></div>
+        <div class="pc-slide"><img src="../images/previews/playarena/preview-2.webp" alt="PlayArena preview screen" loading="lazy"></div>
+        <div class="pc-slide"><img src="../images/previews/playarena/preview-3.webp" alt="PlayArena Sudoku - practice offline, compete online" loading="lazy"></div>
+        <div class="pc-slide"><img src="../images/previews/playarena/preview-4.webp" alt="PlayArena preview screen" loading="lazy"></div>
+        <div class="pc-slide"><img src="../images/previews/playarena/preview-5.webp" alt="PlayArena preview screen" loading="lazy"></div>
+        <div class="pc-slide"><img src="../images/previews/playarena/preview-6.webp" alt="PlayArena preview screen" loading="lazy"></div>
+        <div class="pc-slide"><img src="../images/previews/playarena/preview-7.webp" alt="PlayArena preview screen" loading="lazy"></div>
+      </div>
+      <button class="pc-arrow pc-prev" type="button" aria-label="Previous preview">‹</button>
+      <button class="pc-arrow pc-next" type="button" aria-label="Next preview">›</button>
+      <div class="pc-dots"></div>
     </div>
+    <span class="preview-cap">Swipe to see all six games</span>
   </div>
 </section>
 
@@ -252,5 +263,6 @@
 </footer>
 
 <script src="../js/nav.js" defer></script>
+<script src="../js/carousel.js" defer></script>
 </body>
 </html>

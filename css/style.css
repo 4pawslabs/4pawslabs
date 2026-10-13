@@ -127,11 +127,10 @@ section.tight { padding: 64px 0; }
 
 /* ---------- flagship (Door2Door) ---------- */
 .flagship { border-radius: 24px; background: var(--pine-deep); color: var(--on-pine); overflow: hidden;
-  display: grid; grid-template-columns: 1.15fr .85fr; }
-@media (max-width: 860px) { .flagship { grid-template-columns: 1fr; } }
+  display: grid; grid-template-columns: 1fr; }
 .flagship .copy { padding: 48px; }
-.flagship .art { position: relative; min-height: 320px; background: var(--pine); }
-.flagship .art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.flagship .art { position: relative; min-height: 280px; background: var(--pine); }
+.flagship .art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .badge { display: inline-block; font-family: var(--display); font-size: .78rem; font-weight: 600;
   letter-spacing: .14em; text-transform: uppercase; color: var(--pine-deep); background: var(--amber);
   border-radius: 999px; padding: 6px 14px; margin-bottom: 18px; }
@@ -167,7 +166,8 @@ table.cmp { width: 100%; border-collapse: collapse; font-size: .95rem; backgroun
 table.cmp th, table.cmp td { padding: 13px 18px; text-align: left; border-bottom: 1px solid var(--line); }
 table.cmp thead th { font-family: var(--display); background: var(--pine); color: var(--on-pine); border-bottom: 0; }
 table.cmp thead th.us { color: var(--amber); }
-table.cmp td.us { font-weight: 600; color: var(--pine); background: var(--moss); }
+table.cmp td.us { font-weight: 600; color: var(--pine); background: var(--moss); box-shadow: inset 3px 0 0 var(--amber); }
+table.cmp thead th.us { background: var(--pine-deep); box-shadow: inset 3px 0 0 var(--amber); }
 table.cmp tr:last-child td { border-bottom: 0; }
 .table-scroll { overflow-x: auto; border-radius: 16px; }
 
@@ -198,6 +198,36 @@ table.cmp tr:last-child td { border-bottom: 0; }
 .app-shot .cap { display: block; text-align: center; margin-top: 12px; font-family: var(--display);
   font-weight: 600; font-size: .88rem; color: var(--muted); }
 @media (max-width: 640px) { .app-shot { width: 140px; } }
+
+/* ---------- app preview carousel ---------- */
+.preview-carousel { position: relative; border-radius: 24px; overflow: hidden; background: var(--pine-deep);
+  box-shadow: 0 24px 50px rgba(12,39,31,.26); }
+.pc-viewport { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+  -ms-overflow-style: none; scroll-behavior: smooth; }
+.pc-viewport::-webkit-scrollbar { display: none; }
+.pc-slide { flex: 0 0 100%; scroll-snap-align: start; aspect-ratio: 16 / 9; display: flex;
+  align-items: center; justify-content: center; }
+.pc-slide img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.pc-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px;
+  border-radius: 50%; border: 1.5px solid rgba(255,255,255,.28); background: rgba(12,39,31,.55);
+  color: #fff; font-size: 1.3rem; line-height: 1; cursor: pointer; display: flex; align-items: center;
+  justify-content: center; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  transition: background .2s ease, border-color .2s ease; z-index: 5; }
+.pc-arrow:hover { background: var(--amber); color: var(--pine-deep); border-color: var(--amber); }
+.pc-prev { left: 16px; }
+.pc-next { right: 16px; }
+.pc-dots { position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center;
+  gap: 8px; z-index: 5; }
+.pc-dot { width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,.4); border: 0;
+  padding: 0; cursor: pointer; transition: background .2s ease, width .2s ease; }
+.pc-dot[aria-selected="true"] { background: var(--amber); width: 24px; }
+.preview-cap { display: block; text-align: center; margin-top: 16px; font-family: var(--display);
+  font-weight: 600; font-size: .92rem; color: var(--muted); }
+@media (max-width: 640px) {
+  .pc-arrow { width: 36px; height: 36px; font-size: 1.1rem; }
+  .pc-prev { left: 10px; } .pc-next { right: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .pc-viewport { scroll-behavior: auto; } }
 
 /* ---------- store badges (get the app) ---------- */
 .store-panel { display: flex; align-items: center; justify-content: space-between; gap: 40px;
